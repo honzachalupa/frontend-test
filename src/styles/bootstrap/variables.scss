@@ -1,0 +1,10 @@
+/**
+ * Bootstrap variables customizations
+ */
+
+$enable-flex: true;
+$body-bg: rgba(0, 0, 0, 0.05);
+$brand-primary: red;
+
+// Import bootstrap's own variables
+@import '../../../node_modules/bootstrap/scss/variables';

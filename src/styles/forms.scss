@@ -1,0 +1,31 @@
+.form {
+    .rules-info {
+        display: none;
+    }
+
+    /* .rules-info {
+        .message {
+            display: none;
+
+            &.visible {
+                display: inline;
+            }
+        }
+    } */
+
+    .errors {
+        .error {
+
+        }
+    }
+
+    fieldset {
+        border-left: 2px solid $brand-primary;
+        padding-left: 12px;
+        margin: 10px 0;
+
+        legend {
+            float: left;
+        }
+    }
+}
