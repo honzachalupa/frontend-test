@@ -67,6 +67,13 @@
 
             <button type="submit" class="btn btn-primary submit-button" disabled>Odeslat</button>
         </form>
+
+        <div style="display: none">
+            <p>Bankovní rada České národní banky ve čtvrtek s okamžitou platností ukončila režim devizových intervencí. ČNB tak nebude bránit posílení koruny pod hranici 27 korun za euro. Banka ale zároveň již dříve upozornila, že bude připravena případné nadměrné výkyvy kurzu koruny po ukončení závazku zmírňovat svými nástroji. Koruna v návaznosti na konec intervencí lehce posiluje.</p>
+            <p>Bankovní rada České národní banky ve čtvrtek s okamžitou platností ukončila režim devizových intervencí. ČNB tak nebude bránit posílení koruny pod hranici 27 korun za euro. Banka ale zároveň již dříve upozornila, že bude připravena případné nadměrné výkyvy kurzu koruny po ukončení závazku zmírňovat svými nástroji. Koruna v návaznosti na konec intervencí lehce posiluje.</p>
+            <p>Bankovní rada České národní banky ve čtvrtek s okamžitou platností ukončila režim devizových intervencí. ČNB tak nebude bránit posílení koruny pod hranici 27 korun za euro. Banka ale zároveň již dříve upozornila, že bude připravena případné nadměrné výkyvy kurzu koruny po ukončení závazku zmírňovat svými nástroji. Koruna v návaznosti na konec intervencí lehce posiluje.</p>
+            <p>Bankovní rada České národní banky ve čtvrtek s okamžitou platností ukončila režim devizových intervencí. ČNB tak nebude bránit posílení koruny pod hranici 27 korun za euro. Banka ale zároveň již dříve upozornila, že bude připravena případné nadměrné výkyvy kurzu koruny po ukončení závazku zmírňovat svými nástroji. Koruna v návaznosti na konec intervencí lehce posiluje.</p>
+        </div>
     </div>
 
     {%- include 'components/footer.nunj' -%}

@@ -41,8 +41,6 @@ const formValidation = (form) => {
         });
     });
 
-    validateAll();
-
     function validateAll() {
         Array.from(inputElements).forEach((element) => {
             validateInput(element);

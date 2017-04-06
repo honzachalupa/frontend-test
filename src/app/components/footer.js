@@ -1,35 +1,46 @@
-const footer = (footer) => {
+const footer = (container) => {
     let windowScrollable;
     let windowScrolledBottom;
 
     adjustFooter();
 
-    addEventListeners(window, 'resize scroll',
+    window.addEventListener('resize', () => {
         adjustFooter()
-    );
+    });
+
+    window.addEventListener('scroll', () => {
+        adjustFooter()
+    });
 
     function adjustFooter() {
-        const classList = footer.classList;
-        const customClass = 'visible';
-        let visible;
+        const classList = container.classList;
+        let visibleBottom = false;
+        let visibleScrolling = false;
 
         windowScrollable = isWindowScrollable();
         windowScrolledBottom = isWindowScrolledBottom();
 
         if (windowScrollable) {
             if (windowScrolledBottom) {
-                visible = true;
+                visibleScrolling = true;
             } else {
-                visible = false;
+                visibleBottom = false;
             }
         } else {
-            visible = true;
+            visibleBottom = true;
         }
 
-        if (visible) {
-            footer.classList.add(customClass);
-        } else if (footer.classList.contains(customClass)) {
-            footer.classList.remove(customClass);
+        if (visibleScrolling) {
+            container.classList.add('visible-bottom');
+        } else if (visibleBottom) {
+            container.classList.add('visible-scrolling');
+        } else {
+            if (container.classList.contains('visible-bottom')) {
+                container.classList.remove('visible-bottom');
+            }
+            if (container.classList.contains('visible-scrolling')) {
+                container.classList.remove('visible-scrolling');
+            }
         }
 
         adjustFooterWidth();
@@ -37,7 +48,7 @@ const footer = (footer) => {
 
     function adjustFooterWidth() {
         const headerWidth = document.querySelector('.header').offsetWidth;
-        footer.style.width = `${headerWidth}px`;
+        container.style.width = `${headerWidth}px`;
     }
 
     function isWindowScrollable() {
@@ -49,10 +60,6 @@ const footer = (footer) => {
         const scrollableDistance = document.documentElement.offsetHeight - window.innerHeight;
 
         return (scrolledDistance === scrollableDistance);
-    }
-
-    function addEventListeners(element, triggers, func) {
-        triggers.split(' ').forEach(trigger => element.addEventListener(trigger, func, false));
     }
 };
 
