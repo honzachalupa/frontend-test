@@ -7,24 +7,24 @@
 
     <div class="container">
         <form class="form" data-validate="true">
-            <div class="rules-info"> <!-- Generated from server -->
+            <div class="rules-info"> <!-- Generated from server (also could be generated as global JS variable) -->
                 <div class="message" data-rule-name="format">Špatný formát.</div>
                 <div class="message" data-rule-name="required">Pole musí být vyplněno.</div>
-                <div class="message" data-rule-name="min-length">Pole musí mít minimálně @{required} znaků (nyní má @{current}).</div>
-                <div class="message" data-rule-name="max-length">Pole může mít maximálně @{required} znaků (nyní má @{current}).</div>
+                <div class="message" data-rule-name="min-length">Pole musí mít minimálně <span style="color: red">@{required}</span> znaků (nyní má @{current} znaků).</div>
+                <div class="message" data-rule-name="max-length">Pole musí mít maximálně <span style="color: red">@{required}</span> znaků (nyní má @{current} znaků).</div>
             </div>
             <div class="form-group row">
                 <label for="first-name" class="col-2 col-form-label">Jméno</label>
                 <div class="col-10">
                                                                             <!-- Rules attribute generated from server -->
-                    <input class="form-control" type="text" id="first-name" data-rules="format = '^[a-žA-Ž]*$', min-length = 3">
+                    <input class="form-control" type="text" id="first-name" data-rules="format = '^[a-žA-Ž]*$', min-length = 5">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="last-name" class="col-2 col-form-label">Příjmení</label>
                 <div class="col-10">
-                    <input class="form-control" type="text" id="last-name" data-rules="format = '^[a-žA-Ž]*$'">
+                    <input class="form-control" type="text" id="last-name" data-rules="format = '^[a-žA-Ž]*$', max-length = 5">
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Odeslat</button>
+            <button type="submit" class="btn btn-primary submit-button" disabled>Odeslat</button>
         </form>
     </div>
 
