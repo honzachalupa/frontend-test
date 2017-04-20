@@ -5,11 +5,11 @@ const footer = (container) => {
     adjustFooter();
 
     window.addEventListener('resize', () => {
-        adjustFooter()
+        adjustFooter();
     });
 
     window.addEventListener('scroll', () => {
-        adjustFooter()
+        adjustFooter();
     });
 
     function adjustFooter() {

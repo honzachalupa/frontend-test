@@ -11,7 +11,7 @@
                 <div class="message" data-rule-name="format">Špatný formát.</div>
                 <div class="message" data-rule-name="required">Pole musí být vyplněno.</div>
                 <div class="message" data-rule-name="min-length">Pole musí mít minimálně <span style="color: red">@{required}</span> znaků (nyní má @{current} znaků).</div>
-                <div class="message" data-rule-name="max-length">Pole musí mít maximálně <span style="color: red">@{required}</span> znaků (nyní má @{current} znaků).</div>
+                <div class="message" data-rule-name="max-length">Pole musí mít maximálně <span style="color: blue">@{required}</span> znaků (nyní má @{current} znaků).</div>
             </div>
             <div class="form-group row">
                 <label for="first-name" class="col-2 col-form-label">Jméno</label>
